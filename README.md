@@ -1,4 +1,4 @@
--CIS365 
--Elisheva Kinzer 
--Due: 2/17
--This is an investment calculator. It recieves Initial Investment, Annual Interest Rate, and Year of Retirement and calculates how much the investment will be worth by retirement.
+- CIS365 
+- Elisheva Kinzer 
+- Due: 2/17
+- This is an investment calculator. It recieves Initial Investment, Annual Interest Rate, and Year of Retirement and calculates how much the investment will be worth by retirement.
