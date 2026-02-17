@@ -3,27 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Investment Calculator</title>
 </head>
 <body>
-    <header> <img src="calculator-svgrepo-com.svg" alt="Company logo" width="200" length="200">Investment Calculator</header>
-    <p>This Investment Growth Calculator helps you estimate how much your money could grow by the time you retire. Simply enter your initial investment amount, your expected annual interest rate, and your planned year of retirement. When you click the submit button, the calculator determines how many years your money will have to grow and applies the compound interest formula to project its future value. Compound interest means your investment earns interest not only on the original amount you invested, but also on the interest that builds up over time. The result is then displayed as a complete sentence showing the estimated total value of your investment at retirement. This tool is designed to give you a clear, easy-to-understand estimate to help you plan for your financial future.</p>
-    <form id="investmentForm">
-        <label for="initial investment">Initial Investment:</label>
-            <input type="number" id="initialNumber" min=0 step="0.01" name="initialInvestment" required>
-            <br>
-            <label for="Annual Interest Rate">Annual Interest Rate (%):</label>
-            <input type="number" id="interestRate" min=0 name="interestRate" required>
-            <br>
-            <label for="Retirement Year">Retirement Year</label>
-            <input type="number" id="retirementYear" name="retirementYear" min="2026" max="3026">
-            
-            <button id="submit" type="submit">Submit</button> 
-    </form>
-    <p id="output">Output</p>
+    <div class="p-3 mb-2 bg-white text-dark">
+        <nav class="navbar bg-body-tertiary" >
+            <div id="head" class="container-fluid">
+                <header class="navbar-brand" href="#">
+                    <img src="calculator-svgrepo-com.svg" alt="Company logo" width="30" length="24">    Investment Calculator
+                </header>
+            </div>
+        </nav>
+        <p class="p-3">This Investment Growth Calculator helps you estimate how much your money could grow by the time you retire. Simply enter your initial investment amount, your expected annual interest rate, and your planned year of retirement. When you click the submit button, the calculator determines how many years your money will have to grow and applies the compound interest formula to project its future value. Compound interest means your investment earns interest not only on the original amount you invested, but also on the interest that builds up over time. The result is then displayed as a complete sentence showing the estimated total value of your investment at retirement. This tool is designed to give you a clear, easy-to-understand estimate to help you plan for your financial future.</p>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="investmentForm">
+                        <label for="initial investment">Initial Investment:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" id="initialNumber" class="form-control" min="0" step="0.01" name="initialInvestment" required>
+                        </div>
+                        <br>
+                        <label for="Annual Interest Rate">Annual Interest Rate:</label>
+                        <div class="input-group mb-3">
+                            <input step="0.01" type="number"  id="interestRate" class="form-control" min=0 name="interestRate" required>
+                            <span class="input-group-text">%</span>
+                        </div>
+                        <br>
+                        <label for="Retirement Year">Retirement Year:</label>
+                        <input type="number" class="form-control" id="retirementYear" name="retirementYear" min="2026" max="2126">
+                        <button id="submit" type="submit" class="btn btn-primary mb-3">Calculate</button> 
+                    </form>
+        
+                </div>
+            </div>
+        </div>
+        <p id="output"></p>
+    </div>
     <script src="script.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
 
